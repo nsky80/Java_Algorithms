@@ -1,0 +1,11 @@
+*.class
+
+/build/
+
+dependencies
+bin/
+
+# Eclipse IDE metadata
+.classpath
+.project
+.settings/
