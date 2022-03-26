@@ -1,8 +1,8 @@
-package com.graph.DFS.topological_sort;
+package com.graph.topological_sort;
 
 import java.util.ArrayList;
 
-public class TopSortAdjList {
+public class TopSortAdjListDFS {
 	static int dfs(int src, ArrayList<ArrayList<Integer>> adj, boolean visited[], int i, int[] topOrder) {
 		visited[src] = true;
 
