@@ -1,4 +1,9 @@
-package com.dp.lis;
+/**
+* This class only calculates the maximum possible increasing subsequence.
+*/
+// package com.dp.lis;
+
+import java.util.Arrays;
 
 public class CountLIS_DP{
 	public static long count;
@@ -37,10 +42,67 @@ public class CountLIS_DP{
 		
 	}
 	
+	/**
+	* This is bottom-up DP implementation but it uses same concept as used in TD approach.
+	* It starts in reverse order.
+	*
+	*/
+	public static int countLIS_DP_BU_TD(int [] seq, int n){
+		int lis[] = new int[n];
+		Arrays.fill(lis, 1);
+		
+		// from the end of array
+		for(int i = n - 1; i >= 0; i--){
+			// go forward ((i + 1) the position)from current position 
+			for(int j = i + 1; j < n; j++){
+				// get the longest sequence from Jth index
+				int maxForJ = lis[j];
+				count++;
+				// compare if current element is less than Jth 
+				if (seq[i] < seq[j]){
+					maxForJ += 1;
+				}
+				
+				// update the maximum sequence in Ith position
+				lis[i] = Math.max(maxForJ, lis[i]);
+			}
+		}
+		
+		return lis[0];
+	}
 	
+		
+	/**
+	* This is bottom-up DP implementation but it uses same concept as used in TD approach.
+	* It starts in reverse order.
+	*
+	*/
+	public static int countLIS_DP_BU_BU(int [] seq, int n){
+		int lis[] = new int[n];
+		Arrays.fill(lis, 1);
+				
+		// from the end of array
+		for(int i = 0; i < n; i++){
+			// go forward ((i + 1) the position)from current position 
+			for(int j = 0; j < i; j++){
+				// get the longest sequence from Jth index
+				int maxOnJ = lis[j];
+				count++;
+				// compare if current element is greater than previous Jth sequence
+				if (seq[i] > seq[j]){
+					maxOnJ += 1;
+				}
+				
+				// update the maximum sequence in Ith position
+				lis[i] = Math.max(maxOnJ, lis[i]);
+			}
+		}
+				printArr(lis);
+
+		return lis[n - 1];
+	}
 	
-	
-	
+
 	
 	public static int countLIS_DP_TD(int [] seq){
 		int memo[] = new int[seq.length];
@@ -52,8 +114,13 @@ public class CountLIS_DP{
 		System.out.println();
 		return lis;
 	}
-
 	
+	public static void printArr(int arr[]){
+		for(int i: arr){
+			System.out.print(i + " ");
+		}
+		System.out.println();
+	}
 	
 	    // driver program to test above functions
     public static void main(String args[])
@@ -65,7 +132,11 @@ public class CountLIS_DP{
         //System.out.println("GFG: Length of lis is " + lis(arr, n)+ ", " + count +"\n");
 		count = 0;
         System.out.println("SKY: Length of lis is " + countLIS_DP_TD(arr)+ ", " + count + "\n");
-		
+		count = 0;
+		System.out.println("SKY: Length of lis is " + countLIS_DP_BU_TD(arr, n)+ ", " + count + "\n");
+		count = 0;
+		System.out.println("SKY: Length of lis is " + countLIS_DP_BU_BU(arr, n)+ ", " + count + "\n");
+
 		arr = new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1};
 		n = arr.length;
 		
@@ -73,6 +144,47 @@ public class CountLIS_DP{
         // System.out.println("GFG: Length of lis is " + lis(arr, n)+ ", " + count +"\n");
 		count = 0;
         System.out.println("SKY: Length of lis is " + countLIS_DP_TD(arr)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_TD(arr, arr.length)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_BU(arr, arr.length)+ ", " + count + "\n");
+		
+		
+		arr = new int[]{5, 3, 2, 6, 7, 8, 2, 4, 1};
+		n = arr.length;
+		
+		// count = 0;
+        // System.out.println("GFG: Length of lis is " + lis(arr, n)+ ", " + count +"\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_TD(arr)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_TD(arr, arr.length)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_BU(arr, arr.length)+ ", " + count + "\n");
+		
+		arr = new int[]{1, 2, 4, 3, 5, 4, 7, 2};
+		n = arr.length;
+		
+		// count = 0;
+        // System.out.println("GFG: Length of lis is " + lis(arr, n)+ ", " + count +"\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_TD(arr)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_TD(arr, arr.length)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_BU(arr, arr.length)+ ", " + count + "\n");
+		
+		arr = new int[]{1};
+		n = arr.length;
+		
+		// count = 0;
+        // System.out.println("GFG: Length of lis is " + lis(arr, n)+ ", " + count +"\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_TD(arr)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_TD(arr, arr.length)+ ", " + count + "\n");
+		count = 0;
+        System.out.println("SKY: Length of lis is " + countLIS_DP_BU_BU(arr, arr.length)+ ", " + count + "\n");
     }
 	
 

@@ -1,4 +1,4 @@
-package com.graph.topological_sort;
+package com.graph.dag.topological_sort;
 
 import java.util.ArrayList;
 

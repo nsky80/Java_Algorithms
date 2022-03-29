@@ -2,7 +2,7 @@
  * Practice: https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/
  */
 
-package com.graph.topological_sort;
+package com.graph.dag.topological_sort;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
