@@ -91,9 +91,6 @@ public class SearchA2DMatrix {
 		SearchA2DMatrix obj = new SearchA2DMatrix();
 		System.out.println(obj.searchMatrixRecursion(arr, element));
 		int a;
-		if ((a = 2) == 1) {
-			System.out.println("Yes");
-		}
 	}
 
 }
