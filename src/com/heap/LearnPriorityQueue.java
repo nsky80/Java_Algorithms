@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 public class LearnPriorityQueue {
 
 	public static void main(String[] args) {
-		int arr[] = { 1, 9, 8, 7, 13, 5 };
+//		int arr[] = { 1, 9, 8, 7, 13, 5 };
 		PriorityQueue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
 
 			@Override
