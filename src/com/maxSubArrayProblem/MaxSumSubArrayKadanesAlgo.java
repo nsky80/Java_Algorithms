@@ -5,10 +5,12 @@ public class MaxSumSubArrayKadanesAlgo {
 	
 	public static int getMaxSum(int arr[]) {
 		// It will contain the maximum contiguous array found
-		int maxSoFar = Integer.MAX_VALUE;
+		int maxSoFar = Integer.MIN_VALUE;
+		int prevMaxPtr = 0;
 		
 		// It will sum each positive parts
 		int maxEndingHere = 0;
+		int ptrStartsHere = 0;
 		
 		for(int i = 0; i < arr.length; i++) {
 			maxEndingHere += arr[i];
@@ -16,14 +18,17 @@ public class MaxSumSubArrayKadanesAlgo {
 			// if this sub-array is greater than max sum sub array then update
 			if(maxEndingHere > maxSoFar) {
 				maxSoFar = maxEndingHere;
+				prevMaxPtr = ptrStartsHere;
 			} 
 			
 			// If current value is negative, start adding again
 			if (maxEndingHere < 0) {
 				maxEndingHere = 0;
+				ptrStartsHere = i + 1;
 			}
 		}
 		
+		System.out.println(prevMaxPtr);
 		return maxSoFar;
 	}
 	

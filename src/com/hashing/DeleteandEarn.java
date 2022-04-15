@@ -1,172 +1,75 @@
 package com.hashing;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 public class DeleteandEarn {
-	static int count;
-
-	static class Wrap {
-		Integer count;
-		Integer value;
-		Integer weight;
-
-		Wrap(Integer v, Integer c) {
-			count = c;
-			value = v;
-			weight = c * v;
-		}
-
-		@Override
-		public String toString() {
-			return "[c=" + count + ", v=" + value + ", w=" + weight + "]";
-		}
-
-	}
+	// this count here used for complexity analysis
+	static int count = 0;
+	Map<Integer, Integer> points;
+	Map<Integer, Integer> memo;
 
 	/**
-	 * Greedy fails for : int[] arr3 = {5, 5, 5, 6, 6, 6, 6, 7, 7};
+	 * Time: O(n + m) where m is the maximum element present Space: O(k + m) where k
+	 * is the number of unique element
 	 * 
 	 * @param nums
 	 * @return
 	 */
-	public int deleteAndEarnGreedy(int[] nums) {
-		Map<Integer, Integer> counter = new HashMap<>();
+	public int deleteAndEarn_TD_DP(int[] nums) {
+		// assign the memory
+		points = new HashMap<>();
+		memo = new HashMap<>();
+		int max = nums[0];
 
-		for (int n : nums) {
-			counter.put(n, counter.getOrDefault(n, 0) + 1);
+		// calculate the hash
+		for (int element : nums) {
+			points.put(element, points.getOrDefault(element, 0) + 1);
+			max = Math.max(max, element);
 		}
 
-		Wrap w[] = new Wrap[counter.size()];
-		int c = 0;
-		for (Map.Entry<Integer, Integer> e : counter.entrySet()) {
-			w[c++] = new Wrap(e.getKey(), e.getValue());
-		}
-
-		Arrays.sort(w, new Comparator<Wrap>() {
-			public int compare(Wrap o1, Wrap o2) {
-				return o2.weight - o1.weight;
-			}
-		});
-		System.out.println(counter);
-		for (Wrap obj : w) {
-			System.out.print(obj);
-		}
-		System.out.println();
-
-		int ans = 0;
-		Set<Integer> deleted = new HashSet<>();
-		for (Wrap obj : w) {
-			if (deleted.contains(obj.value)) {
-				continue;
-			} else {
-				System.out.println(obj);
-				ans += obj.weight;
-				if (counter.containsKey(obj.value - 1)) {
-					deleted.add(obj.value - 1);
-				}
-				if (counter.containsKey(obj.value + 1)) {
-					deleted.add(obj.value + 1);
-				}
-			}
-		}
-
-		return ans;
+		return findMax(max);
 	}
 
-	public int deleteAndEarnRecursive(int[] nums) {
-		Map<Integer, Integer> counter = new HashMap<>();
+	public int deleteAndEarn_DP_BU(int[] nums) {
+		// assign the memory
+		points = new HashMap<>();
+		int n = nums[0];
 
-		for (int n : nums) {
-			counter.put(n, counter.getOrDefault(n, 0) + 1);
+		// calculate the hash
+		for (int element : nums) {
+			points.put(element, points.getOrDefault(element, 0) + 1);
+			n = Math.max(n, element);
 		}
 
-		Set<Integer> keys = new HashSet<>(counter.keySet());
-
-		int count = 0;
-		count = getMax(keys, counter, keys.iterator().next());
-
-		return count;
-	}
-
-	private int getMax(Set<Integer> keys, Map<Integer, Integer> counter, Integer current) {
-		count++;
-		if (keys.isEmpty())
-			return 0;
-		int sumByIncl = current * counter.get(current);
-		int sumByExcl = 0;
-
-		// include current into the solution
-		keys.remove(current);
-		boolean flag1 = keys.remove(current - 1);
-		boolean flag2 = keys.remove(current + 1);
-		Iterator<Integer> itr = keys.iterator();
-		if (itr.hasNext())
-			sumByIncl += getMax(keys, counter, itr.next());
-
-		// exclude current from the solution
-		// as we're leaving current key so if flags are set then add them into the set
-		if (flag1)
-			keys.add(current - 1);
-		if (flag2)
-			keys.add(current + 1);
-		Iterator<Integer> itr2 = keys.iterator();
-		if (itr2.hasNext())
-			sumByExcl += getMax(keys, counter, itr2.next());
-		return Math.max(sumByIncl, sumByExcl);
-	}
-
-	public int deleteAndEarnTD_DP(int[] nums) {
-		Map<Integer, Integer> counter = new HashMap<>();
-
-		for (int n : nums) {
-			counter.put(n, counter.getOrDefault(n, 0) + 1);
+		int dp[] = new int[n + 1];
+		dp[0] = 0;
+		dp[1] = points.getOrDefault(1, 0);
+		for (int i = 2; i <= n; i++) {
+			int gain = i * points.getOrDefault(i, 0);
+			dp[i] = Math.max(gain + dp[i - 2], dp[i - 1]);
 		}
 
-		Set<Integer> keys = new HashSet<>(counter.keySet());
-		Map<Integer, Integer> memo = new HashMap<>();
-		int count = 0;
-		count = getMaxTD_DP(keys, counter, keys.iterator().next(), memo);
-
-		return count;
+		return dp[n];
 	}
 
-	private int getMaxTD_DP(Set<Integer> keys, Map<Integer, Integer> counter, Integer current,
-			Map<Integer, Integer> memo) {
-//		count++;
-		if (keys.isEmpty())
+	private int findMax(int n) {
+		if (n <= 0)
 			return 0;
 
-		if (memo.containsKey(current))
-			return memo.get(current);
+		if (memo.containsKey(n))
+			return memo.get(n);
 
-		int sumByIncl = current * counter.get(current);
-		int sumByExcl = 0;
+		// max points can be gained by including current element
+		int currentMax = 0;
+		// if it is available in points, i.e. it is part of array then
+		if (points.containsKey(n)) {
+			currentMax += n * points.get(n);
+		}
 
-		// include current into the solution
-		keys.remove(current);
-		boolean flag1 = keys.remove(current - 1);
-		boolean flag2 = keys.remove(current + 1);
-		Iterator<Integer> itr = keys.iterator();
-		if (itr.hasNext())
-			sumByIncl += getMaxTD_DP(keys, counter, itr.next(), memo);
-
-		// exclude current from the solution
-		// as we're leaving current key so if flags are set then add them into the set
-		if (flag1)
-			keys.add(current - 1);
-		if (flag2)
-			keys.add(current + 1);
-		Iterator<Integer> itr2 = keys.iterator();
-		if (itr2.hasNext())
-			sumByExcl += getMaxTD_DP(keys, counter, itr2.next(), memo);
-		memo.put(current, Math.max(sumByIncl, sumByExcl));
-		return memo.get(current);
+		// put the result into memo and return
+		memo.put(n, Math.max(currentMax + findMax(n - 2), findMax(n - 1)));
+		return memo.get(n);
 	}
 
 	public static void main(String[] args) {
@@ -178,25 +81,25 @@ public class DeleteandEarn {
 		int[] arr3 = { 5, 5, 5, 6, 6, 6, 6, 7, 7 };
 		int[] arr5 = { 8, 7, 3, 8, 1, 4, 10, 10, 10, 2 };
 		count = 0;
-		System.out.println(obj.deleteAndEarnRecursive(arr1) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr1) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnRecursive(arr2) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr2) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnRecursive(arr3) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr3) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnRecursive(arr4) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr4) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnRecursive(arr5) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr5) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnTD_DP(arr1) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr1) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnTD_DP(arr2) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr2) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnTD_DP(arr3) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr3) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnTD_DP(arr4) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr4) + " " + count);
 		count = 0;
-		System.out.println(obj.deleteAndEarnTD_DP(arr5) + " " + count);
+		System.out.println(obj.deleteAndEarn_TD_DP(arr5) + " " + count);
 	}
 
 }
