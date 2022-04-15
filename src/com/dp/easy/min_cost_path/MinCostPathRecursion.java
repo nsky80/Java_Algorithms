@@ -1,4 +1,4 @@
-// package com.dp.easy.min_cost_path;
+ package com.dp.easy.min_cost_path;
 
 public class MinCostPathRecursion{
 	static int count;

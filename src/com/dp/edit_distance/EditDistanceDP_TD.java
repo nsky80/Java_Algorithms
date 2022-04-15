@@ -1,4 +1,4 @@
-// package com.dp.edit_distance;
+ package com.dp.edit_distance;
 // for IDE
 
 import java.util.Arrays;

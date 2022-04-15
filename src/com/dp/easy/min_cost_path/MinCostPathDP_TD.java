@@ -1,4 +1,4 @@
-// package com.dp.easy.min_cost_path;
+ package com.dp.easy.min_cost_path;
 import java.util.Arrays;
 
 public class MinCostPathDP_TD{

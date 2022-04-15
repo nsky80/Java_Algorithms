@@ -1,5 +1,5 @@
-// package com.dp.easy.min_cost_path;
-import java.util.Arrays;
+ package com.dp.easy.min_cost_path;
+//import java.util.Arrays;
 
 public class MinCostPathDP_BU{
 	static int count;

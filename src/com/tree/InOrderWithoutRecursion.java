@@ -1,19 +1,20 @@
+package com.tree;
+
 import java.util.ArrayList;
 
-// Definition for binary tree
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-
-	TreeNode(int x) {
-		val = x;
-		left = null;
-		right = null;
-	}
-}
-
 public class InOrderWithoutRecursion {
+	// Definition for binary tree
+	static class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+
+		TreeNode(int x) {
+			val = x;
+			left = null;
+			right = null;
+		}
+	}
 
 	public static ArrayList<Integer> inorderTraversal(TreeNode A) {
 		ArrayList<Integer> arr = new ArrayList<>();

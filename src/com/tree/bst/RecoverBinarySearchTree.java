@@ -1,3 +1,5 @@
+package com.tree.bst;
+
 import java.util.ArrayList;
 
 /**
@@ -6,21 +8,19 @@ import java.util.ArrayList;
  * @author satis
  */
 
-// Definition for binary tree
-// Uncomment this section for separate execution
-//class TreeNode {
-//	int val;
-//	TreeNode left;
-//	TreeNode right;
-//
-//	TreeNode(int x) {
-//		val = x;
-//		left = null;
-//		right = null;
-//	}
-//}
-//
 class Solution {
+	static class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+
+		TreeNode(int x) {
+			val = x;
+			left = null;
+			right = null;
+		}
+	}
+
 	public ArrayList<Integer> recoverTree(TreeNode A) {
 		ArrayList<Integer> arr = inorderTraversal(A);
 

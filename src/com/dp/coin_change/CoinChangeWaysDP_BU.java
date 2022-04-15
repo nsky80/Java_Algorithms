@@ -1,4 +1,4 @@
-// package com.dp.coin_change;
+ package com.dp.coin_change;
 // import java.util.HashMap;
 // import java.util.Map;
 import java.util.Arrays;
@@ -85,7 +85,7 @@ public class CoinChangeWaysDP_BU{
 		arr = new int[]{2, 5, 3, 6, 1, 8, 9, 12, 4};
 		System.out.println(obj.countCoinChange(arr, arr.length, 20) + " " + counter);
 		counter = 0;
-		System.out.println(obj.countGFG(arr, arr.length, 20) + " " + counter);
+		System.out.println(countGFG(arr, arr.length, 20) + " " + counter);
 
 	}
 	

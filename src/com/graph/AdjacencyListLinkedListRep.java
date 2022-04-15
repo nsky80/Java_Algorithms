@@ -16,6 +16,7 @@ class Graph2 {
 	private int V; // number of vertices
 	private LinkedList<Integer> adj[]; // adjacency list array
 
+	@SuppressWarnings("unchecked")
 	Graph2(int V) {
 		this.V = V;
 

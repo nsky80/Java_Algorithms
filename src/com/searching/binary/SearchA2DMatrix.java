@@ -90,7 +90,7 @@ public class SearchA2DMatrix {
 		int element = 130;
 		SearchA2DMatrix obj = new SearchA2DMatrix();
 		System.out.println(obj.searchMatrixRecursion(arr, element));
-		int a;
+//		int a;
 	}
 
 }

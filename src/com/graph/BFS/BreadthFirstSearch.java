@@ -8,6 +8,7 @@ class GraphBFS {
 	int V;
 	ArrayList<Integer> adj[];
 
+	@SuppressWarnings("unchecked")
 	GraphBFS(int v) {
 		this.V = v;
 

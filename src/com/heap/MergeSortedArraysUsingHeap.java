@@ -1,3 +1,4 @@
+package com.heap;
 
 class MinHeapNode {
 	int val; // The element to be stored
@@ -23,13 +24,13 @@ class MinHeapNode {
 
 };
 
-class MinHeap {
+class MinHeapForArr {
 	MinHeapNode[] hArr; // Array of elements in heap
 	int heap_size; // Current number of elements in min heap
 
 	// Constructor: Builds a heap from
 	// a given array a[] of given size
-	public MinHeap(MinHeapNode a[], int size) {
+	public MinHeapForArr(MinHeapNode a[], int size) {
 		hArr = a;
 		heap_size = size;
 
@@ -112,7 +113,7 @@ public class MergeSortedArraysUsingHeap {
 		}
 
 		// creating the minHeap from the first element of the array
-		MinHeap heap = new MinHeap(nodeArray, n);
+		MinHeapForArr heap = new MinHeapForArr(nodeArray, n);
 
 		// printing the heap
 		System.out.println();

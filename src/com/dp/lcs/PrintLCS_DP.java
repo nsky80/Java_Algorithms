@@ -158,9 +158,9 @@ public class PrintLCS_DP {
 	}
 
 	public static void main(String[] args) {
-		String str1 = "abc";
-		String str2 = "ac";
-
+//		String str1 = "abc";
+//		String str2 = "ac";
+//
 //		count = 0;
 //		System.out.println(countLCS(str1, str2) + " " + count + "\n");
 //		count = 0;

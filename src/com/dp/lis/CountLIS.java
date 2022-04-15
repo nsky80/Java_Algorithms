@@ -14,13 +14,13 @@ public class CountLIS{
 		// if the length of the subarray is 1
 		if (n == 0) return 1;
 		
-		if (memo[n] != 0) return memo[i];
+		if (memo[n] != 0) return memo[n];
 		
 		int maxTillNow = 1;
 		
 		for(int j = n - 1; j >= 0; j--){
 			// get the LIS of previous sub-array
-			int currentLIS = countLIS_DP_TD_Helper(seq, j);
+			int currentLIS = countLIS_DP_TD_Helper(seq, j, memo);
 			if (seq[n] >= seq[j]){
 				currentLIS += 1;
 			}
