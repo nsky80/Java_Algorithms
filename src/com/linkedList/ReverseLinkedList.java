@@ -1,3 +1,6 @@
+/**
+ * https://leetcode.com/problems/reverse-linked-list/
+ */
 package com.linkedList;
 
 import java.util.ArrayDeque;
@@ -30,11 +33,33 @@ public class ReverseLinkedList {
 		// make the next of head as null because, it is last element
 		head.next = null;
 
-		// update the head
-		head = previous;
-
 		return previous;
 
+	}
+
+	ListNode rNode;
+
+	/**
+	 * Reverse Linked list recursively O(n), O(n)
+	 */
+	public ListNode reverseList(ListNode head) {
+		if (head == null)
+			return null;
+		reverse(head);
+		return rNode;
+	}
+
+	public ListNode reverse(ListNode head) {
+		if (head.next == null) {
+			rNode = head;
+			return head;
+		}
+
+		ListNode temp = reverse(head.next);
+		temp.next = head;
+		head.next = null;
+
+		return head;
 	}
 
 	/**
