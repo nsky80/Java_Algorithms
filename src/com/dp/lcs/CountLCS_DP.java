@@ -103,6 +103,37 @@ public class CountLCS_DP{
 		return max;
 	}
 	
+	
+	/**
+	 * Time: O(m * n)
+	 * Space: O(n)
+	 * Space Optimized version
+	 */
+    public int longestCommonSubsequence(String text1, String text2) {
+        int m = text1.length();
+        int n = text2.length();
+        int dp[] = new int[n + 1];
+        
+        int prevDia = 0;
+        int currentDia = 0;
+        
+        for(int i = 0; i < m; i++){
+            currentDia = dp[0];
+            for(int j = 1; j <= n; j++){
+                prevDia = dp[j];
+                
+                if (text1.charAt(i) == text2.charAt(j - 1))
+                    dp[j] = currentDia + 1;
+                else
+                    dp[j] = Math.max(dp[j - 1], dp[j]);
+                
+                currentDia = prevDia;
+            }
+        }
+        
+        return dp[n];
+    }
+	
 	public static void main(String[] args){
 		String str1 = "abc";
 		String str2 = "ac";
