@@ -19,12 +19,14 @@ Solved coding problems in Java from different learning platforms and implementat
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/hashing/TwoSum.java) | Hashing | O(n) | O(n) |
+| 2 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/arrays/ContainsDuplicate.java) | Hashing | O(n) | O(n) |
+| 3 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/arrays/ProductOfArrayExceptSelf.java) | Prefix Sum | O(n) | O(1) |
 
-### [Heap](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/heap)
+### [Backtracking](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/backtracking)
 
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
-| 1 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/heap/K_ClosestPointsToOrigin.java) | Sorting | O(n.logk) | O(k) |
+| 1 | [Subsets](https://leetcode.com/problems/subsets/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/Subsets.java) | Arrays | O(n * 2 ^ n) | O(n) |
 
 ### [Concurrency](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/concurrency)
 
@@ -44,4 +46,23 @@ Solved coding problems in Java from different learning platforms and implementat
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/mst/MinCostToConnectAllPoints.java) | MST, Prim's Algo | O(n^2.logn) | O(n^2) |
+| 2 | [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/grid/PathWithMinimumEffort.java) | Binary Search | O(log(min - max) * m * n) | O(m * n) |
+| 3 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/DFS/EvaluateDivision.java) | DFS, BFS | O(V + E) | O(V) |
 
+### [Heap](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/heap)
+
+| No | Problem | Solution | Sub Topic | Time | Space |
+| --- | ------ | -------- | --------- | ---- | ----- |
+| 1 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/heap/K_ClosestPointsToOrigin.java) | Sorting | O(n.logk) | O(k) |
+
+### [Tree](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/tree)
+
+| No | Problem | Solution | Sub Topic | Time | Space |
+| --- | ------ | -------- | --------- | ---- | ----- |
+| 1 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/dfs_bfs/CountGoodNodesInBinaryTree.java) | Tree PreOrder | O(n) | O(height) |
+
+### [Two Pointers](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/two_pointers)
+
+| No | Problem | Solution | Sub Topic | Time | Space |
+| --- | ------ | -------- | --------- | ---- | ----- |
+| 1 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/dfs_bfs/BackspaceStringCompare.java) | Stack | O(n + m) | O(1) |

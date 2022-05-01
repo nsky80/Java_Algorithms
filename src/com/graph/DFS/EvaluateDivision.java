@@ -119,5 +119,72 @@ public class EvaluateDivision {
 		// here we can return -1 as well, if we doesn't wanted to use found variable.
 		return mul;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/**
+	 * Another solution, without using extra boolean variable.
+	 * time: O(V + E) 
+	 */
+	class Solution {
+	    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
+	        Map<String, List<Edge>> adjList = createAdjList(equations, values);
+	        double ans[] = new double[queries.size()];    
+	        
+	        // System.out.println(adjList);
+	        for(int q = 0; q < queries.size(); q++){            
+	            ans[q] = dfs(adjList, queries.get(q).get(0), queries.get(q).get(1), new HashSet<String>());        
+	        }
+	        
+	        return ans;
+	    }
+	    
+	    private double dfs(Map<String, List<Edge>> adjList, String src, String dest, Set<String> visited){
+	        // if (src.equals(dest))
+	        //     return 1;
+	        visited.add(src);
+	        
+	        
+	        for(Edge edge: adjList.getOrDefault(src, new ArrayList<>())){
+	            if (edge.to.equals(dest))
+	                return edge.weight;
+
+	            if (!visited.contains(edge.to)){                
+	                double weight = dfs(adjList, edge.to, dest, visited);
+	                if (weight > 0)
+	                    return weight * edge.weight;
+	            }
+	        }
+	        
+	        return -1;
+	    }
+	    
+	    private Map<String, List<Edge>> createAdjList(List<List<String>> eq, double[] values){
+	        Map<String, List<Edge>> adjList = new HashMap<>();
+	        
+	        for(int i = 0; i < eq.size(); i++){
+	            List<String> curr = eq.get(i);
+	            List<Edge> nei1 = adjList.getOrDefault(curr.get(0), new ArrayList<>());
+	            List<Edge> nei2 = adjList.getOrDefault(curr.get(1), new ArrayList<>());
+	            
+	            nei1.add(new Edge(curr.get(1), values[i]));
+	            nei2.add(new Edge(curr.get(0), 1 / values[i]));
+	            
+	            adjList.put(curr.get(0), nei1);
+	            adjList.put(curr.get(1), nei2);
+	        }
+	        
+	        return adjList;
+	    }
+	}
 
 }
