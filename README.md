@@ -27,7 +27,14 @@ Solved coding problems in Java from different learning platforms and implementat
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Subsets](https://leetcode.com/problems/subsets/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/Subsets.java) | Arrays | O(n * 2 ^ n) | O(n) |
-| 2 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/CombinationSum.java) | Arrays | O(2 ^ mn) | O(mn) |
+| 2 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/CombinationSum.java) | Math | O(2 ^ mn) | O(mn) |
+| 3 | [Permutations](https://leetcode.com/problems/permutations/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/Permutations.java) | Math | O(n^2 * n!) | O(n) |
+
+### [Binary Search](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/searching/binary)
+
+| No | Problem | Solution | Sub Topic | Time | Space |
+| --- | ------ | -------- | --------- | ---- | ----- |
+| 1 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/searching/binary/LongestIncreasingSubsequence.java) | Greedy, DP | O(nlogn) | O(n) |
 
 ### [Concurrency](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/concurrency)
 
@@ -44,7 +51,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 3 | [Coin Change](https://leetcode.com/problems/coin-change/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/coin_change/CoinChange.java) | Arrays | O(m * n) | O(m) |
 | 4 | [Coin Change 2](https://leetcode.com/problems/coin-change-2/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/coin_change/CoinChange2.java) | Arrays | O(m * n) | O(m) |
 | 5 | [Target Sum](https://leetcode.com/problems/target-sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/medium/TargetSum.java) | 2D Arrays | O(m * n) | O(m * n) |
-
+| 6 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/medium/PartitionEqualSubsetSum.java) | Subset Sum | O(n * m) | O(m)-Optimized |
 
 ### [Graph](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/graph)
 
@@ -54,7 +61,9 @@ Solved coding problems in Java from different learning platforms and implementat
 | 2 | [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/grid/PathWithMinimumEffort.java) | Binary Search | O(log(min - max) * m * n) | O(m * n) |
 | 3 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/DFS/EvaluateDivision.java) | DFS, BFS | O(V + E) | O(V) |
 | 4 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/BFS/grid/RottingOranges.java) | BFS | O(m * n) | O(m * n) |
-| 4 | [Walls and Gates](https://www.lintcode.com/problem/663/description/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/grid/WallsAndGates.java) | BFS | O(m * n) | O(m * n) |
+| 5 | [Walls and Gates](https://www.lintcode.com/problem/663/description/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/grid/WallsAndGates.java) | BFS | O(m * n) | O(m * n) |
+| 6 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/dag/topological_sort/CourseSchedule.java) | DFS, Cycle Detection | O(V + E) | O(V + E) |
+| 7 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/graph/dag/topological_sort/CourseSchedule2.java) | DFS, BFS, Top Sort | O(V + E) | O(V + E) |
 
 ### [Greedy Algorithms](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/greedy)
 
@@ -79,12 +88,15 @@ Solved coding problems in Java from different learning platforms and implementat
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/stack.arrays/ShortestUnsortedContinuousSubarray.java) | Sorting, 2 Pointers | O(n) | O(n) |
+| 2 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/stack/ImplementStackUsingQueues.java) | Design | O(n) O(1) O(1) | O(1) |
+| 3 | [Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/stack/RemoveAllAdjacentDuplicatesInStringII.java) | String | O(n) | O(n) |
 
 ### [Tree](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/tree)
 
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/dfs_bfs/CountGoodNodesInBinaryTree.java) | Tree PreOrder | O(n) | O(height) |
+| 2 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/traversal/ValidateBinarySearchTree.java) | BST | O(n) | O(height) |
 
 ### [Two Pointers](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/two_pointers)
 
