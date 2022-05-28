@@ -7,6 +7,39 @@ import java.util.Arrays;
 public class EditDistanceDP_TD{
 	static int count;
 	
+	/**
+	 * Same time and space but it is faster, as we do not need to initialize the memo array.
+	 * @author satis
+	 *
+	 */
+	class Solution {
+	    Integer memo[][];
+	    public int minDistance(String word1, String word2) {
+	        memo = new Integer[word1.length() + 1][word2.length() + 1];
+	        return getMin(word1, word2, word1.length(), word2.length());
+	    }
+	    
+	    public int getMin(String w1, String w2, int m, int n){
+	        // if target string is empty then we have to delete all the characters from source
+	        if (n == 0)
+	            return m;
+	        
+	        // if source is empty then we have to add all the string of length n
+	        if (m == 0)
+	            return n;
+	        
+	        if (memo[m][n] != null)
+	            return memo[m][n];
+	        
+	        // if the characters are matching, no need to perform any operation
+	        if (w1.charAt(m - 1) == w2.charAt(n - 1)){
+	            return memo[m][n] = getMin(w1, w2, m - 1, n - 1);
+	        }else{
+	            // get the minimum by performing all 3 operations
+	            return memo[m][n] = Math.min(getMin(w1, w2, m, n - 1), Math.min(getMin(w1, w2, m - 1, n), getMin(w1, w2, m - 1, n - 1))) + 1;
+	        }
+	    }
+	}
 	
 	/**
 	* This recursive solution solves the problem from the reverse,
@@ -22,7 +55,7 @@ public class EditDistanceDP_TD{
 		// if first string is ended, then we have to perform n insertion only
 		if (m == 0) return n;
 		
-		// similarily, if string already created then we have to perform m removal only.
+		// Similarly, if string already created then we have to perform m removal only.
 		if (n == 0) return m;
 		
 		if(memo[m][n] != -1) return memo[m][n];

@@ -1,3 +1,6 @@
+/**
+ * https://leetcode.com/problems/clone-graph/
+ */
 package com.graph;
 
 import java.util.ArrayDeque;
@@ -43,63 +46,93 @@ class Node {
 
 }
 
-class Solution3 {
+/**
+ * Time: O(N + E), Space: O(N)
+ * @author Satish Kumar Yadav
+ *
+ */
+public class CloneGraph {
+	
+	class SolutionUsingDFS {
+	    
+	    
+	    public Node cloneGraph(Node node) {
+	        if (node == null)
+	            return null;
+	        
+	        Map<Integer, Node> map = new HashMap<>();        
+	        
+	        return dfs(node, map);
+	    }
+	    
+	    public Node dfs(Node src, Map<Integer, Node> map){
+	        Node newNode = new Node(src.val);
+	        map.put(src.val, newNode);
+	        
+	        for(Node nei: src.neighbors){
+	            if (map.containsKey(nei.val)){
+	                newNode.neighbors.add(map.get(nei.val));
+	            }else{
+	                newNode.neighbors.add(dfs(nei, map));
+	            }
+	        }
+	        
+	        return newNode;
+	    }
+	}
 
-	public Node cloneGraphBFS(Node node) {
-		// if graph is null, then it should return null
-		if (node == null)
-			return null;
+	static class SolutionUsingBFS {
 
-		// at-least 1 node is present in the graph
+		public Node cloneGraphBFS(Node node) {
+			// if graph is null, then it should return null
+			if (node == null)
+				return null;
 
-		// creating queue for BFS
-		Deque<Node> q = new ArrayDeque<>();
+			// at-least 1 node is present in the graph
 
-		// It will keep reference of visited node
-		// It checks whether a node is visited or not
-		// if node is not visited then add the copy of node into this
-		Map<Integer, Node> visited = new HashMap<>();
+			// creating queue for BFS
+			Deque<Node> q = new ArrayDeque<>();
 
-		// first node added into the queue
-		q.add(node);
+			// It will keep reference of visited node
+			// It checks whether a node is visited or not
+			// if node is not visited then add the copy of node into this
+			Map<Integer, Node> visited = new HashMap<>();
 
-		// BFS
-		while (!q.isEmpty()) {
-			Node current = q.poll();
+			// first node added into the queue
+			q.add(node);
 
-			// if current node is not available then add it's copy
-			if (!visited.containsKey(current.val)) {
-				visited.put(current.val, new Node(current.val, new ArrayList<Node>()));
-			}
+			// BFS
+			while (!q.isEmpty()) {
+				Node current = q.poll();
 
-			// it gives the reference of copy node if already exist then fine otherwise
-			// it gets added in previous step
-			Node copyNode = visited.get(current.val);
-
-			// now visit and add the copy of neighbors
-			for (Node adj : current.neighbors) {
-				// if it's copy doesn't exist, make it and add it into visited node
-				// this node also need to explored, so added to the queue
-				if (!visited.containsKey(adj.val)) {
-					visited.put(adj.val, new Node(adj.val, new ArrayList<Node>()));
-					q.add(adj);
+				// if current node is not available then add it's copy
+				if (!visited.containsKey(current.val)) {
+					visited.put(current.val, new Node(current.val, new ArrayList<Node>()));
 				}
 
-				// add copy of current adjacent node into the neighbors list
-				copyNode.neighbors.add(visited.get(adj.val));
+				// it gives the reference of copy node if already exist then fine otherwise
+				// it gets added in previous step
+				Node copyNode = visited.get(current.val);
+
+				// now visit and add the copy of neighbors
+				for (Node adj : current.neighbors) {
+					// if it's copy doesn't exist, make it and add it into visited node
+					// this node also need to explored, so added to the queue
+					if (!visited.containsKey(adj.val)) {
+						visited.put(adj.val, new Node(adj.val, new ArrayList<Node>()));
+						q.add(adj);
+					}
+
+					// add copy of current adjacent node into the neighbors list
+					copyNode.neighbors.add(visited.get(adj.val));
+				}
 			}
-		}
 
 //		System.out.println(visited.get(node.val));
-		// return the source of the graph
-		return visited.get(node.val);
+			// return the source of the graph
+			return visited.get(node.val);
+		}
 	}
-}
-
-
-
-
-public class CloneGraph {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -122,7 +155,7 @@ public class CloneGraph {
 
 		System.out.println(g1);
 
-		Solution3 sol = new Solution3();
+		SolutionUsingBFS sol = new SolutionUsingBFS();
 		sol.cloneGraphBFS(g1);
 	}
 
