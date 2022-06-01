@@ -50,6 +50,8 @@ Solved coding problems in Java from different learning platforms and implementat
 | 1 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/NumberOfOneBits.java) | Number | O(1) | O(1) |
 | 2 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/NumberOfStepsToReduceNumberToZero.java) | Number | O(logn) | O(1) |
 | 3 | [Missing Number](https://leetcode.com/problems/missing-number/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/MissingNumber.java) | Math | O(n) | O(1) |
+| 4 | [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/MaximumProductOfWordLengths.java) | BitMask | O(n * (n + N)) | O(n) |
+| 5 | [Check String Contains All Binary Codes Of Size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/CheckStringContainsAllBinaryCodesOfSizeK.java) | Rolling Hash | O(n) | O(2^k) |
 
 ### [Concurrency](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/concurrency)
 
@@ -157,6 +159,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 6 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/stack/monotonic_stack/RemoveKDigits.java) | Monotonic Stack | O(n) | O(n) |
 | 7 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/stack/monotonic_stack/DailyTemperatures.java) | Monotonic Stack | O(n) | O(1)-Optimized |
 | 8 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/stack/EvaluateReversePolishNotation.java) | Stack | O(n) | O(n) |
+| 9 | [Car Fleet](https://leetcode.com/problems/car-fleet/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/stack/CarFleet.java) | Monotonic Stack, Sorting | O(nlogn) | O(n) |
 
 ### [Tree](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/tree)
 
