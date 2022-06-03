@@ -22,6 +22,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 2 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/arrays/ContainsDuplicate.java) | Hashing | O(n) | O(n) |
 | 3 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/arrays/ProductOfArrayExceptSelf.java) | Prefix Sum | O(n) | O(1) |
 | 4 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/arrays/ValidSudoku.java) | Grid | O(n^2) | O(n) |
+| 5 | [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/arrays/prefix_sum/RangeSumQuery2D_Immutable.java) | Prefix Sum, Grid | O(mn + q) | O(mn) |
 
 ### [Backtracking](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/backtracking)
 
@@ -42,6 +43,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/searching/binary/LongestIncreasingSubsequence.java) | Greedy, DP | O(nlogn) | O(n) |
 | 2 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/searching/binary/SearchInRotatedSortedArray.java) | Arrays | O(logn) | O(1) |
+| 3 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/searching/binary/FindMinimumInRotatedSortedArray.java) | Arrays | O(logn) | O(1) |
 
 ### [Bit Manipulation](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/bit_manipulation)
 
@@ -52,6 +54,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 3 | [Missing Number](https://leetcode.com/problems/missing-number/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/MissingNumber.java) | Math | O(n) | O(1) |
 | 4 | [Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/MaximumProductOfWordLengths.java) | BitMask | O(n * (n + N)) | O(n) |
 | 5 | [Check String Contains All Binary Codes Of Size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/CheckStringContainsAllBinaryCodesOfSizeK.java) | Rolling Hash | O(n) | O(2^k) |
+| 6 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/bit_manipulation/DivideTwoIntegers.java) | Bit Shifting | O(logn) | O(1) |
 
 ### [Concurrency](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/concurrency)
 
