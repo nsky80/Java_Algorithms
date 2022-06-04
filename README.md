@@ -36,6 +36,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 6 | [Permutations II](https://leetcode.com/problems/permutations-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/PermutationsII.java) | Math, HashTable | O(n.n!) | O(n) |
 | 7 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/SubsetsII.java) | String | O(n.2^n) | O(n) |
 | 8 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/CombinationSumII.java) | Array | O(2^n) | O(n) |
+| 9 | [N-Queens](https://leetcode.com/problems/n-queens/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/N_Queens.java) | Array | ~ O(N!) | O(n) |
 
 ### [Binary Search](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/searching/binary)
 
@@ -129,6 +130,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 1 | [Reorder List](https://leetcode.com/problems/reorder-list/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/ReorderList.java) | Two Pointers | O(n) | O(1) |
 | 2 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/RemoveNthNodeFromEndOfList.java) | Two Pointers | O(n) | O(1) |
 | 3 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/CopyListWithRandomPointer.java) | HashMap | O(n) | O(1)-Optimized |
+| 4 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/AddTwoNumbers.java) | Traversal | O(n) | O(1) |
 
 ### [Math](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/maths)
 
