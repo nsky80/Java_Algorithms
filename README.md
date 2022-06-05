@@ -37,6 +37,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 7 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/SubsetsII.java) | String | O(n.2^n) | O(n) |
 | 8 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/CombinationSumII.java) | Array | O(2^n) | O(n) |
 | 9 | [N-Queens](https://leetcode.com/problems/n-queens/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/N_Queens.java) | Array | ~ O(N!) | O(n) |
+| 10 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/N_QueensII.java) | Array | ~ O(N!) | O(n) |
 
 ### [Binary Search](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/searching/binary)
 
@@ -176,6 +177,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 4 | [Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/PopulatingNextRightPointersInEachNodeII.java) | LinkedList, BFS | O(n) | O(1) |
 | 5 | [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/dfs_bfs/DeepestLeavesSum.java) | DFS, BFS | O(n) | O(n) |
 | 6 | [Tree from Preorder and Inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/creation/ConstructBinaryTreeFromPreorderAndInorderTraversal.java) | Hashing | O(n) | O(n) |
+| 7 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/creation/BinaryTreeMaximumPathSum.java) | DFS | O(n) | O(n) |
 
 ### [Two Pointers](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/two_pointers)
 
