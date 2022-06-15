@@ -38,6 +38,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 8 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/CombinationSumII.java) | Array | O(2^n) | O(n) |
 | 9 | [N-Queens](https://leetcode.com/problems/n-queens/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/N_Queens.java) | Array | ~ O(N!) | O(n) |
 | 10 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/N_QueensII.java) | Array | ~ O(N!) | O(n) |
+| 11 | [Word Search](https://leetcode.com/problems/word-search/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/backtracking/WordSearch.java) | Grid | O(m*n*4^s) | O(m + n) |
 
 ### [Binary Search](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/searching/binary)
 
@@ -79,6 +80,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 9 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/lcs/DistinctSubsequences.java) | String | O(n * m) | O(n * m) |
 | 10 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/edit_distance) | String | O(n * m) | O(m)-Optimized |
 | 11 | [Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/medium/OnesAndZeroes.java) | String | O(n * m * k) | O(n * m)-Optimized |
+| 12 | [Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/dp/lcs/DeleteOperationForTwoStrings.java) | String | O(n * m) | O(m)-Optimized |
 
 ### [Graph](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/graph)
 
@@ -132,6 +134,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | 2 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/RemoveNthNodeFromEndOfList.java) | Two Pointers | O(n) | O(1) |
 | 3 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/CopyListWithRandomPointer.java) | HashMap | O(n) | O(1)-Optimized |
 | 4 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/AddTwoNumbers.java) | Traversal | O(n) | O(1) |
+| 5 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/linkedList/IntersectionOfTwoLinkedLists.java) | Two pointers | O(m + n) | O(1) |
 
 ### [Math](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/maths)
 
@@ -144,6 +147,9 @@ Solved coding problems in Java from different learning platforms and implementat
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/sliding_window/LongestSubstringWithoutRepeatingCharacters.java) | Hash Table | O(n) | O(n) |
+| 2 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/sliding_window/LongestRepeatingCharacterReplacement.java) | String | O(n) | O(1) |
+| 3 | [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/sliding_window/MinimumOperationsToReduceXtoZero.java) | Greedy, Hashing | O(n) | O(1) |
+| 4 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/sliding_window/MaximumErasureValue.java) | Hashing | O(n) | O(set(n)) |
 
 
 ### [Sorting](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/sorting)
@@ -185,3 +191,6 @@ Solved coding problems in Java from different learning platforms and implementat
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/tree/dfs_bfs/BackspaceStringCompare.java) | Stack | O(n + m) | O(1) |
 | 2 | [3Sum](https://leetcode.com/problems/3sum/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/two_pointers/ThreeSum.java) | Sorting | O(n * n) | O(n) |
+| 3 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/two_pointers/MergeSortedArray.java) | Sorting | O(n) | O(1) |
+| 4 | [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/two_pointers/RemovePalindromicSubsequences.java) | String | O(n) | O(1) |
+| 5 | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/two_pointers/TwoSumII_InputArrayIsSorted.java) | Binary Search | O(n) | O(1) |
