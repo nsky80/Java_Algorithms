@@ -112,6 +112,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/hashing/MaxNumberOfK_SumPairs.java) | Hash Table | O(n) | O(n) |
+| 2 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/hashing/LongestConsecutiveSequence.java) | Union | O(n) | O(n) |
 
 ### [Heap](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/heap)
 
@@ -141,6 +142,7 @@ Solved coding problems in Java from different learning platforms and implementat
 | No | Problem | Solution | Sub Topic | Time | Space |
 | --- | ------ | -------- | --------- | ---- | ----- |
 | 1 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/matrix/RotateImage.java) | Matrix, Rotation | O(n * n) | O(1) |
+| 2 | [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | [Solution](https://github.com/nsky80/Java_Algorithms/blob/main/src/com/sorting/MinimumMovesToEqualArrayElementsII.java) | Sorting | O(nlogn) | O(n) |
 
 ### [Sliding Window](https://github.com/nsky80/Java_Algorithms/tree/main/src/com/sliding_window)
 
