@@ -1,10 +1,22 @@
+/**
+ * https://leetcode.com/problems/binary-tree-level-order-traversal/
+ */
 package com.tree.traversal;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
 
 import com.tree.Node;
 
+/**
+ * Time: O(n), Space: O(n)
+ * 
+ * @author satis
+ *
+ */
 public class LevelOrderBinaryTreeTraversal {
 
 	public static void main(String[] args) {
@@ -40,4 +52,29 @@ public class LevelOrderBinaryTreeTraversal {
 		}
 	}
 
+	
+	
+	class DFS_Solution {
+	    public List<List<Integer>> levelOrder(TreeNode root) {
+	        List<List<Integer>> tr = new ArrayList<>();
+	        if (root == null) return tr;
+	        
+	        updateLevel(tr, root, 0);
+	        
+	        return tr;
+	    }
+	    
+	    public void updateLevel(List<List<Integer>> tr, TreeNode root, int level){
+	        if (root == null)
+	            return;
+	        
+	        if (level == tr.size())
+	            tr.add(new LinkedList<>());
+	        
+	        tr.get(level).add(root.val);
+	        
+	        updateLevel(tr, root.left, level + 1);
+	        updateLevel(tr, root.right, level + 1);
+	    }
+	}
 }
